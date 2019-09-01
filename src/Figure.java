@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 
 public class Figure {
-
     // Input method
     public void fileInput(BufferedReader input) throws IOException {
-        ArrayList<Square> figure = new ArrayList<Square>();
+
+        ArrayList<Square> figure = new ArrayList<>();
         String line = input.readLine();
         int count = 0;
 
@@ -62,12 +62,11 @@ public class Figure {
     }
 
     // Replace squares
-    private ArrayList<Square> replaceSquares(ArrayList<Square> figure, int i, int n) {
+    private void replaceSquares(ArrayList<Square> figure, int i, int n) {
         Square tmp = figure.get(i);
         Square b = figure.get(n);
         figure.set(i, b);
         figure.set(n, tmp);
-        return figure;
     }
 
     // Sum of four square corners
